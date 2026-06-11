@@ -154,3 +154,178 @@ Além disso, cada história possui uma lista de verificação para facilitar a v
 - [ ] Filtro por ano funciona.
 - [ ] Tipos de indicador possuem diferenciação visual.
 - [ ] Gráficos são legíveis em telas diferentes.
+
+---
+
+## HU08 — Ativar modo de alto contraste
+
+| ID | Critério |
+|---|---|
+| CA-HU08-01 | Dado que o usuário acessa qualquer tela, quando procura a opção de acessibilidade, então o botão de alto contraste deve estar disponível. |
+| CA-HU08-02 | Dado que o modo padrão está ativo, quando o usuário clica em alto contraste, então a interface deve alterar suas cores. |
+| CA-HU08-03 | Dado que o alto contraste está ativo, quando o usuário navega para outra tela, então a preferência deve ser mantida durante a sessão. |
+
+**Checklist de validação**
+
+- [ ] Botão de alto contraste disponível.
+- [ ] Alto contraste pode ser ativado.
+- [ ] Alto contraste pode ser desativado.
+- [ ] Preferência é mantida durante a sessão.
+
+---
+
+## HU09 — Realizar login
+
+| ID | Critério |
+|---|---|
+| CA-HU09-01 | Dado que o usuário informa credenciais válidas, quando envia o formulário, então o sistema deve autenticar o usuário. |
+| CA-HU09-02 | Dado que o usuário informa credenciais inválidas, quando envia o formulário, então o sistema deve exibir mensagem genérica de erro. |
+| CA-HU09-03 | Dado que o usuário permanece inativo por 30 minutos, quando tenta continuar usando o sistema, então a sessão deve estar encerrada. |
+
+**Checklist de validação**
+
+- [ ] Login solicita e-mail e senha.
+- [ ] Login aceita credenciais válidas.
+- [ ] Login rejeita credenciais inválidas.
+- [ ] Mensagem de erro não informa qual campo está incorreto.
+- [ ] Sessão expira após 30 minutos de inatividade.
+
+---
+
+## HU10 — Atualizar status de tarefas
+
+| ID | Critério |
+|---|---|
+| CA-HU10-01 | Dado que o usuário possui permissão, quando edita uma tarefa, então o sistema deve permitir alteração de status e percentual. |
+| CA-HU10-02 | Dado que o usuário não possui permissão, quando acessa a tarefa, então os controles de edição não devem estar disponíveis. |
+| CA-HU10-03 | Dado que uma alteração é salva, quando o histórico é consultado, então a alteração deve aparecer com usuário, data, hora, valor anterior e valor novo. |
+
+**Checklist de validação**
+
+- [ ] Usuário autorizado edita status.
+- [ ] Usuário autorizado edita percentual.
+- [ ] Usuário não autorizado não edita.
+- [ ] Alteração gera registro no histórico.
+
+---
+
+## HU11 — Visualizar histórico de atualizações
+
+| ID | Critério |
+|---|---|
+| CA-HU11-01 | Dado que uma tarefa possui alterações, quando o usuário acessa o histórico, então o sistema deve listar todas as atualizações. |
+| CA-HU11-02 | Dado que o histórico é exibido, quando o usuário consulta os registros, então cada item deve mostrar data, hora e autor. |
+| CA-HU11-03 | Dado que o usuário acessa uma tarefa, quando visualiza seu resumo, então a data da última atualização deve estar destacada. |
+
+**Checklist de validação**
+
+- [ ] Histórico exibe alterações.
+- [ ] Histórico exibe autor.
+- [ ] Histórico exibe data e hora.
+- [ ] Última atualização aparece em destaque.
+- [ ] Histórico não é editável.
+
+---
+
+## HU12 — Inserir novos dados via interface
+
+| ID | Critério |
+|---|---|
+| CA-HU12-01 | Dado que o usuário SEDEF acessa o painel administrativo, quando seleciona cadastro, então o sistema deve exibir formulários de inserção. |
+| CA-HU12-02 | Dado que o usuário tenta salvar dados incompletos, quando submete o formulário, então o sistema deve indicar os campos obrigatórios. |
+| CA-HU12-03 | Dado que o cadastro é concluído com sucesso, quando o usuário acessa a interface pública, então o novo item deve estar visível. |
+
+**Checklist de validação**
+
+- [ ] Formulários existem para níveis da hierarquia.
+- [ ] Campos obrigatórios são sinalizados.
+- [ ] Dados inválidos são rejeitados.
+- [ ] Cadastro válido é salvo.
+- [ ] Cadastro gera registro de auditoria quando aplicável.
+
+---
+
+## HU13 — Importar dados por planilha
+
+| ID | Critério |
+|---|---|
+| CA-HU13-01 | Dado que o usuário SEDEF seleciona uma planilha `.xlsx` ou `.csv`, quando envia o arquivo, então o sistema deve validar sua estrutura. |
+| CA-HU13-02 | Dado que a planilha possui erro, quando a validação é realizada, então o sistema deve rejeitar a importação integralmente. |
+| CA-HU13-03 | Dado que a planilha é válida, quando a importação é concluída, então os dados devem ser inseridos e registrados no log de auditoria. |
+
+**Checklist de validação**
+
+- [ ] Aceita `.xlsx`.
+- [ ] Aceita `.csv`.
+- [ ] Rejeita planilha inválida.
+- [ ] Informa erro de forma clara.
+- [ ] Registra importação bem-sucedida no log.
+
+---
+
+## HU14 — Gerenciar permissões de usuários
+
+| ID | Critério |
+|---|---|
+| CA-HU14-01 | Dado que o administrador acessa o painel, quando abre gerenciamento de usuários, então o sistema deve listar usuários e perfis atuais. |
+| CA-HU14-02 | Dado que o administrador altera um perfil, quando salva a alteração, então o sistema deve atualizar as permissões do usuário. |
+| CA-HU14-03 | Dado que um usuário sem perfil de administrador tenta acessar a tela, quando solicita a página, então o sistema deve negar acesso. |
+| CA-HU14-04 | Dado que uma permissão é alterada, quando o log é consultado, então a alteração deve estar registrada. |
+
+**Checklist de validação**
+
+- [ ] Administrador visualiza usuários.
+- [ ] Administrador altera permissões.
+- [ ] Usuário não administrador não acessa a tela.
+- [ ] Alteração fica registrada no log.
+
+---
+
+## HU15 — Visualizar log de auditoria
+
+| ID | Critério |
+|---|---|
+| CA-HU15-01 | Dado que o administrador acessa o painel, quando abre o log de auditoria, então o sistema deve listar ações que alteraram o estado do sistema. |
+| CA-HU15-02 | Dado que o log é exibido, quando o administrador consulta os registros, então cada registro deve conter ação, usuário, data e hora. |
+| CA-HU15-03 | Dado que o log é imutável, quando qualquer usuário tenta editar ou excluir registros, então o sistema deve impedir a operação. |
+
+**Checklist de validação**
+
+- [ ] Log exibe ações realizadas.
+- [ ] Log exibe usuário.
+- [ ] Log exibe data e hora.
+- [ ] Log pode ser filtrado.
+- [ ] Log não pode ser editado ou excluído.
+
+---
+
+## HU16 — Visualizar responsáveis e colaboradores da ação
+
+| ID | Critério |
+|---|---|
+| CA-HU16-01 | Dado que uma ação possui responsável principal cadastrado, quando o usuário acessa o detalhamento, então o sistema deve exibir o responsável. |
+| CA-HU16-02 | Dado que uma ação possui colaboradores, quando o usuário acessa o detalhamento, então o sistema deve exibir a lista de colaboradores. |
+| CA-HU16-03 | Dado que uma ação não possui colaboradores cadastrados, quando o detalhamento é exibido, então o sistema deve informar que não há colaboradores vinculados. |
+
+**Checklist de validação**
+
+- [ ] Responsável principal aparece no detalhamento da ação.
+- [ ] Colaboradores aparecem no detalhamento da ação.
+- [ ] Ausência de colaboradores é informada.
+- [ ] As informações são visíveis conforme perfil de acesso definido.
+
+---
+
+## 4. Critérios Gerais de Aceitação do Sistema
+
+Além dos critérios por história, o sistema deve atender aos seguintes critérios gerais:
+
+| ID | Critério geral | Relacionamento |
+|---|---|---|
+| CG01 | A navegação principal deve permitir acesso às telas mínimas do protótipo. | Protótipo |
+| CG02 | As informações públicas devem estar disponíveis sem autenticação. | HU01, HU02, HU03, HU04, HU05 |
+| CG03 | Funcionalidades administrativas devem exigir autenticação e perfil adequado. | HU09, HU12, HU13, HU14, HU15 |
+| CG04 | Alterações de estado devem gerar histórico ou log de auditoria. | HU10, HU12, HU13, HU14, HU15 |
+| CG05 | A interface deve possuir recurso de acessibilidade visual. | HU08 |
+| CG06 | Dados exportados devem refletir o conjunto filtrado. | HU06 |
+| CG07 | O sistema deve respeitar a hierarquia do Plano Decenal. | HU01, HU02, HU12 |
