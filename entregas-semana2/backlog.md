@@ -104,3 +104,31 @@ As histórias foram classificadas em três níveis:
 | Administrador | HU09, HU14, HU15 |
 
 ---
+
+## 9. Inconsistências e Decisões de Backlog
+
+| ID | Inconsistência | Decisão | Impacto |
+|---|---|---|---|
+| IC01 | RF09 e RF15 possuem escopo duplicado sobre painel administrativo e permissões. | Manter RF09 e marcar RF15 como duplicata no histórico de versões. | HU14 permanece vinculada a ambos temporariamente, até revisão formal. |
+| IC02 | RF12 e RF22 possuem sobreposição sobre inserção/alteração via interface. | Manter RF12 para inserção e RF22 para alteração de registros existentes. | HU12 e HU10 usam os requisitos com escopo delimitado. |
+| IC03 | RF19 não possuía história correspondente na versão anterior. | Criar HU16 para exibir responsável principal e colaboradores. | Backlog passa a cobrir RF19. |
+| IC04 | RF23 cita JWT como funcionalidade, mas possui natureza técnica. | Manter vínculo com HU09, mas considerar reclassificação como requisito não funcional de segurança. | Será revisado em histórico de versões. |
+
+---
+
+## 10. Próximas Ações
+
+- [ ] Criar telas iniciais do protótipo navegável.
+- [ ] Atualizar `docs/matriz-rastreabilidade.md`.
+- [ ] Registrar IC01, IC02, IC03 e IC04 em `docs/historico-versoes.md`.
+- [ ] Validar se todos os requisitos funcionais possuem pelo menos uma história associada.
+- [ ] Validar se todos os itens obrigatórios possuem critério de aceitação correspondente.
+
+---
+
+## 11. Histórico de Alterações
+
+| Versão | Data | Alteração |
+|---|---|---|
+| 1.0 | 11/06/2025 | Criação inicial do backlog na entrega da Semana 2. |
+| 1.1 | 11/06/2025 | Separação do backlog em documento próprio, inclusão da HU16 e criação de organização por tela e perfil. |
