@@ -1,0 +1,301 @@
+/* Protótipo inicial - Semana 3
+   Projeto: Sistema de Monitoramento do Plano Decenal da Criança e do Adolescente
+   Versão simples: HTML + CSS, sem JavaScript e sem framework externo.
+*/
+
+:root {
+  --fundo: #f5f5f5;
+  --texto: #222;
+  --borda: #ccc;
+  --card: #fff;
+  --principal: #2f4f6f;
+  --principal-claro: #e8eef5;
+  --link: #1f5c99;
+  --sucesso: #e2f4e8;
+  --alerta: #fff3cd;
+  --erro: #f8d7da;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+header {
+  background: var(--principal);
+  color: #fff;
+  padding: 18px 24px;
+}
+
+header h1 {
+  margin: 0 0 6px 0;
+  font-size: 24px;
+}
+
+header p {
+  margin: 0;
+  font-size: 14px;
+}
+
+nav {
+  background: #fff;
+  border-bottom: 1px solid var(--borda);
+  padding: 10px 24px;
+}
+
+nav a {
+  display: inline-block;
+  margin: 4px 10px 4px 0;
+  color: var(--link);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 980px;
+  margin: 24px auto;
+  padding: 0 16px 40px;
+}
+
+section,
+.card {
+  background: var(--card);
+  border: 1px solid var(--borda);
+  border-radius: 4px;
+  padding: 18px;
+  margin-bottom: 18px;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--principal);
+  font-size: 22px;
+}
+
+h3 {
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 18px;
+}
+
+small,
+.muted {
+  color: #666;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.lista-links {
+  padding-left: 20px;
+}
+
+.lista-links li {
+  margin-bottom: 8px;
+}
+
+.breadcrumb {
+  background: var(--principal-claro);
+  border: 1px solid #d0dae6;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+form label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid var(--borda);
+  border-radius: 4px;
+  background: #fff;
+}
+
+button,
+.botao {
+  display: inline-block;
+  background: var(--principal);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 9px 14px;
+  margin: 10px 8px 0 0;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.botao.secundario,
+button.secundario {
+  background: #666;
+}
+
+.botao.claro {
+  background: #fff;
+  color: var(--principal);
+  border: 1px solid var(--principal);
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.tabela th,
+.tabela td {
+  border: 1px solid var(--borda);
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.tabela th {
+  background: var(--principal-claro);
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 7px;
+  border-radius: 4px;
+  background: var(--principal-claro);
+  border: 1px solid #d0dae6;
+  font-size: 13px;
+}
+
+.aviso {
+  background: var(--alerta);
+  border: 1px solid #e3c865;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.sucesso {
+  background: var(--sucesso);
+  border: 1px solid #aacfb6;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.erro {
+  background: var(--erro);
+  border: 1px solid #d8a3aa;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.barra {
+  background: #ddd;
+  border-radius: 3px;
+  overflow: hidden;
+  height: 18px;
+  margin: 6px 0 12px;
+}
+
+.barra span {
+  display: block;
+  height: 18px;
+  background: var(--principal);
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+}
+
+.fluxo {
+  display: block;
+  padding: 10px;
+  border: 1px dashed var(--borda);
+  background: #fafafa;
+  margin-top: 8px;
+}
+
+footer {
+  border-top: 1px solid var(--borda);
+  background: #fff;
+  padding: 14px 24px;
+  text-align: center;
+  color: #666;
+  font-size: 13px;
+}
+
+body.contraste {
+  background: #000;
+  color: #fff;
+}
+
+body.contraste header,
+body.contraste .botao,
+body.contraste button {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+body.contraste nav,
+body.contraste section,
+body.contraste .card,
+body.contraste footer {
+  background: #111;
+  color: #fff;
+  border-color: #fff;
+}
+
+body.contraste a,
+body.contraste h2,
+body.contraste h3 {
+  color: #ffff66;
+}
+
+body.contraste input,
+body.contraste select,
+body.contraste textarea {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+body.contraste .breadcrumb,
+body.contraste .tabela th,
+body.contraste .badge,
+body.contraste .fluxo {
+  background: #222;
+  color: #fff;
+  border-color: #fff;
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  header,
+  nav {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
