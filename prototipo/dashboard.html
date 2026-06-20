@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Plano Decenal</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Dashboard de Acompanhamento</h1>
+    <p>Visão consolidada dos indicadores do Plano Decenal</p>
+  </header>
+
+  <nav aria-label="Navegação principal">
+    <a href="index.html">Início</a>
+    <a href="busca.html">Busca e filtros</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="detalhamento.html">Detalhamento</a>
+    <a href="historico.html">Histórico</a>
+    <a href="exportacao.html">Exportação</a>
+    <a href="login.html">Login</a>
+    <a href="acessibilidade.html">Alto contraste</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Resumo da dashboard</h2>
+      <p>Os dados abaixo são demonstrativos. O período exibido deve corresponder aos anos do Plano Decenal carregado no sistema.</p>
+      <p><strong>Plano carregado:</strong> Plano Decenal ativo - ano inicial e ano final definidos no cadastro do plano.</p>
+      <p><strong>Filtros aplicados:</strong> Compromisso: todos | Indicador: todos | Período: todo o plano | Responsável: todos.</p>
+    </section>
+
+    <section>
+      <h2>Indicadores demonstrativos</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Indicador de acompanhamento escolar</h3>
+          <p>Progresso demonstrativo acumulado no período do plano.</p>
+          <div class="barra"><span style="width: 65%;">65%</span></div>
+          <a href="detalhamento.html">Ver tarefas relacionadas</a>
+        </article>
+        <article class="card">
+          <h3>Indicador de atendimento social</h3>
+          <p>Progresso demonstrativo acumulado no período do plano.</p>
+          <div class="barra"><span style="width: 40%;">40%</span></div>
+          <a href="detalhamento.html">Ver tarefas relacionadas</a>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ações da dashboard</h2>
+      <a class="botao" href="detalhamento.html">Ir para detalhamento</a>
+      <a class="botao claro" href="exportacao.html">Exportar dashboard</a>
+    </section>
+  </main>
+
+  <footer>Dashboard simplificada para validação do fluxo.</footer>
+</body>
+</html>
