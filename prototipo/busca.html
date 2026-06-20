@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Busca e Filtros | Plano Decenal</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Busca e Filtros</h1>
+    <p>Consulta pública de informações do Plano Decenal</p>
+  </header>
+
+  <nav aria-label="Navegação principal">
+    <a href="index.html">Início</a>
+    <a href="busca.html">Busca e filtros</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="detalhamento.html">Detalhamento</a>
+    <a href="historico.html">Histórico</a>
+    <a href="exportacao.html">Exportação</a>
+    <a href="login.html">Login</a>
+    <a href="acessibilidade.html">Alto contraste</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Busca textual</h2>
+      <p>A busca textual permite localizar informações por palavra-chave, responsável, eixo do plano ou compromisso.</p>
+      <form>
+        <label for="termo">Termo de busca</label>
+        <input type="text" id="termo" name="termo" placeholder="Ex.: educação, proteção social, secretaria">
+      </form>
+    </section>
+
+    <section>
+      <h2>Filtros estruturados</h2>
+      <p>Conforme validação com a cliente, o filtro por status não será usado nesta versão.</p>
+      <form>
+        <label for="compromisso">Compromisso</label>
+        <select id="compromisso" name="compromisso">
+          <option>Todos</option>
+          <option>Compromisso 01 - Proteção social</option>
+          <option>Compromisso 02 - Educação</option>
+        </select>
+
+        <label for="indicador">Indicador</label>
+        <select id="indicador" name="indicador">
+          <option>Todos</option>
+          <option>Indicador de acompanhamento escolar</option>
+          <option>Indicador de atendimento social</option>
+        </select>
+
+        <label for="periodo">Período</label>
+        <select id="periodo" name="periodo">
+          <option>Todo o período do plano carregado</option>
+          <option>Primeiro ciclo do plano</option>
+          <option>Segundo ciclo do plano</option>
+        </select>
+
+        <label for="responsavel">Responsável</label>
+        <select id="responsavel" name="responsavel">
+          <option>Todos</option>
+          <option>SEDEF</option>
+          <option>Conselho Estadual</option>
+          <option>Secretaria Municipal</option>
+        </select>
+      </form>
+      <a class="botao" href="dashboard.html">Aplicar e ver dashboard</a>
+      <a class="botao secundario" href="index.html">Voltar</a>
+    </section>
+
+    <section>
+      <h2>Resultado demonstrativo</h2>
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Contexto</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tarefa de acompanhamento escolar</td>
+            <td>Problema Público → Compromisso → Objetivo → Linha de Ação</td>
+            <td><a href="detalhamento.html">Ver detalhes</a></td>
+          </tr>
+          <tr>
+            <td>Indicador de atendimento social</td>
+            <td>Compromisso 01 → Objetivo 02</td>
+            <td><a href="dashboard.html">Ver dashboard</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>Busca textual e filtros estruturados sem uso de JavaScript.</footer>
+</body>
+</html>
