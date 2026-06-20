@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exportação | Plano Decenal</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Exportação da Dashboard</h1>
+    <p>Exportação da visão consolidada de acompanhamento</p>
+  </header>
+
+  <nav aria-label="Navegação principal">
+    <a href="index.html">Início</a>
+    <a href="busca.html">Busca e filtros</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="detalhamento.html">Detalhamento</a>
+    <a href="historico.html">Histórico</a>
+    <a href="exportacao.html">Exportação</a>
+    <a href="login.html">Login</a>
+    <a href="acessibilidade.html">Alto contraste</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Resumo da exportação</h2>
+      <p>A exportação considera a dashboard atual, os filtros aplicados e o período correspondente ao Plano Decenal carregado.</p>
+      <table class="tabela">
+        <tbody>
+          <tr>
+            <th>Conteúdo</th>
+            <td>Indicadores, gráficos simples, percentuais, filtros aplicados e contexto do plano.</td>
+          </tr>
+          <tr>
+            <th>Período</th>
+            <td>Anos correspondentes ao plano ativo cadastrado no sistema.</td>
+          </tr>
+          <tr>
+            <th>Formato visual</th>
+            <td>PDF da dashboard.</td>
+          </tr>
+          <tr>
+            <th>Dados de apoio</th>
+            <td>CSV ou Excel com os dados utilizados na dashboard.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Opções demonstrativas</h2>
+      <form>
+        <label for="formato">Formato</label>
+        <select id="formato" name="formato">
+          <option>PDF - Dashboard visual</option>
+          <option>CSV - Dados da dashboard</option>
+          <option>Excel - Dados da dashboard</option>
+        </select>
+
+        <label for="observacao">Observação para o relatório</label>
+        <textarea id="observacao" name="observacao" rows="3" placeholder="Campo demonstrativo opcional"></textarea>
+      </form>
+      <div class="sucesso">Exportação simulada. Em uma versão futura, o arquivo seria gerado após confirmação.</div>
+      <a class="botao" href="dashboard.html">Voltar à dashboard</a>
+    </section>
+  </main>
+
+  <footer>Exportação ajustada conforme validação com a cliente.</footer>
+</body>
+</html>
