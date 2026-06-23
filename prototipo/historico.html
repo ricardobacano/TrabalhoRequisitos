@@ -3,109 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Histórico de Atualizações | Plano Decenal</title>
-  <meta name="description" content="Protótipo final do Sistema de Monitoramento do Plano Decenal da Criança e do Adolescente.">
+  <title>Histórico | Plano Decenal</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="">
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-
-  <header class="site-header">
-    <div class="topbar">
-      <a class="brand" href="index.html" aria-label="Voltar ao início">
-        <span class="brand-mark">PD</span>
-        <span>
-          <strong>Plano Decenal</strong>
-          <small>Monitoramento e transparência</small>
-        </span>
-      </a>
-
-      <div class="header-actions">
-        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Alto contraste</button>
-        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu-principal">Menu</button>
-      </div>
-    </div>
-
-    <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
-      <a href="index.html">Início</a>
-          <a href="busca.html">Busca e filtros</a>
-          <a href="dashboard.html">Dashboard</a>
-          <a href="detalhamento.html">Detalhamento</a>
-          <a href="historico.html" class="active" aria-current="page">Histórico</a>
-          <a href="exportacao.html">Exportação</a>
-          <a href="login.html">Login</a>
-          <a href="admin.html">Admin</a>
-          <a href="usuarios.html">Usuários</a>
-          <a href="acessibilidade.html">Acessibilidade</a>
-    </nav>
+<body>
+  <header>
+    <h1>Histórico de Atualizações</h1>
+    <p>Histórico público de alterações relevantes</p>
   </header>
 
-  <main id="conteudo" class="page-shell">
-    <section class="hero fade-in">
-      <div>
-        <h1>Histórico de Atualizações</h1>
-        <p>Histórico público de alterações relevantes, separado do log administrativo.</p>
-      </div>
+  <nav aria-label="Navegação principal">
+    <a href="index.html">Início</a>
+    <a href="busca.html">Busca e filtros</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="detalhamento.html">Detalhamento</a>
+    <a href="historico.html">Histórico</a>
+    <a href="exportacao.html">Exportação</a>
+    <a href="login.html">Login</a>
+    <a href="acessibilidade.html">Alto contraste</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Histórico público</h2>
+      <p>Esta tela mostra atualizações relevantes para transparência pública. O log administrativo completo fica restrito ao painel administrativo.</p>
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Item</th>
+            <th>Alteração exibida ao público</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>15/06</td>
+            <td>Tarefa 01</td>
+            <td>Percentual de execução atualizado para 55%.</td>
+          </tr>
+          <tr>
+            <td>12/06</td>
+            <td>Indicador 01</td>
+            <td>Indicador associado ao compromisso de proteção social.</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
-    
-<section class="panel fade-in">
-  <div class="section-title">
-    <p class="eyebrow">Transparência pública</p>
-    <h2>Histórico de atualizações relevantes</h2>
-  </div>
-  <p>O histórico público mostra alterações relevantes para acompanhamento do plano, sem expor detalhes administrativos sensíveis. O log completo fica restrito ao painel administrativo.</p>
-  <div class="timeline">
-    <div><strong>Atualização de percentual</strong><span>Tarefa 01 atualizada para 55% de execução. Última atualização pública demonstrativa.</span></div>
-    <div><strong>Indicador associado</strong><span>Indicador de cobertura de atendimento vinculado ao compromisso de proteção social.</span></div>
-    <div><strong>Responsável confirmado</strong><span>SEDEF definida como responsável principal da ação.</span></div>
-  </div>
-</section>
-
-<section class="panel fade-in">
-  <div class="section-title">
-    <p class="eyebrow">Próximo passo</p>
-    <h2>Exportar visão consolidada</h2>
-  </div>
-  <p>Após consultar histórico e dashboard, o usuário pode gerar uma exportação visual da dashboard.</p>
-  <div class="button-row">
-    <a class="button primary" href="exportacao.html">Exportar dashboard</a>
-    <a class="button secondary" href="detalhamento.html">Voltar ao detalhamento</a>
-  </div>
-</section>
-
+    <section>
+      <h2>Próximo passo do fluxo</h2>
+      <a class="botao" href="exportacao.html">Exportar dashboard</a>
+      <a class="botao secundario" href="detalhamento.html">Voltar ao detalhamento</a>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <span class="brand-mark" aria-hidden="true">PD</span>
-        <div>
-          <strong>Plano Decenal</strong>
-          <small>Sistema de Monitoramento</small>
-        </div>
-      </div>
-
-      <address class="footer-info">
-        <strong>Contato</strong><br>
-        contato@planodecenal.gov.br<br>
-        (41) 0000-0000
-      </address>
-
-      <div class="footer-info">
-        <strong>Endereço</strong><br>
-        R. Evaristo F. Ferreira da Costa, 383-391<br>
-        Curitiba, PR 82590-300
-      </div>
-
-      <div class="footer-info">
-        <strong>Suporte</strong><br>
-        <button class="support-link" type="button" data-support-button>Solicitar suporte</button>
-      </div>
-    </div>
-  </footer>
-
-  <div class="toast" role="status" aria-live="polite" data-toast></div>
-  <script src="js/script.js"></script>
+  <footer>Histórico público separado do log administrativo.</footer>
 </body>
 </html>
