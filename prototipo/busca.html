@@ -4,98 +4,175 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Busca e Filtros | Plano Decenal</title>
+  <meta name="description" content="Protótipo final do Sistema de Monitoramento do Plano Decenal da Criança e do Adolescente.">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-  <header>
-    <h1>Busca e Filtros</h1>
-    <p>Consulta pública de informações do Plano Decenal</p>
+<body class="">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="topbar">
+      <a class="brand" href="index.html" aria-label="Voltar ao início">
+        <span class="brand-mark">PD</span>
+        <span>
+          <strong>Plano Decenal</strong>
+          <small>Monitoramento e transparência</small>
+        </span>
+      </a>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Alto contraste</button>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu-principal">Menu</button>
+      </div>
+    </div>
+
+    <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+          <a href="busca.html" class="active" aria-current="page">Busca e filtros</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="detalhamento.html">Detalhamento</a>
+          <a href="historico.html">Histórico</a>
+          <a href="exportacao.html">Exportação</a>
+          <a href="login.html">Login</a>
+          <a href="admin.html">Admin</a>
+          <a href="usuarios.html">Usuários</a>
+          <a href="acessibilidade.html">Acessibilidade</a>
+    </nav>
   </header>
 
-  <nav aria-label="Navegação principal">
-    <a href="index.html">Início</a>
-    <a href="busca.html">Busca e filtros</a>
-    <a href="dashboard.html">Dashboard</a>
-    <a href="detalhamento.html">Detalhamento</a>
-    <a href="historico.html">Histórico</a>
-    <a href="exportacao.html">Exportação</a>
-    <a href="login.html">Login</a>
-    <a href="acessibilidade.html">Alto contraste</a>
-  </nav>
-
-  <main>
-    <section>
-      <h2>Busca textual</h2>
-      <p>A busca textual permite localizar informações por palavra-chave, responsável, eixo do plano ou compromisso.</p>
-      <form>
-        <label for="termo">Termo de busca</label>
-        <input type="text" id="termo" name="termo" placeholder="Ex.: educação, proteção social, secretaria">
-      </form>
+  <main id="conteudo" class="page-shell">
+    <section class="hero fade-in">
+      <div>
+        <h1>Busca e Filtros</h1>
+        <p>Busca textual separada dos filtros estruturados, sem uso de status como filtro.</p>
+      </div>
     </section>
 
-    <section>
-      <h2>Filtros estruturados</h2>
-      <p>Conforme validação com a cliente, o filtro por status não será usado nesta versão.</p>
-      <form>
-        <label for="compromisso">Compromisso</label>
-        <select id="compromisso" name="compromisso">
-          <option>Todos</option>
-          <option>Compromisso 01 - Proteção social</option>
-          <option>Compromisso 02 - Educação</option>
-        </select>
+    
+<section class="panel fade-in">
+  <div class="section-title">
+    <p class="eyebrow">Consulta pública</p>
+    <h2>Busca textual</h2>
+  </div>
+  <p>A busca textual é separada dos filtros estruturados. Ela aceita palavra-chave, responsável, eixo do plano ou compromisso.</p>
+  <form class="form-grid" data-search-form>
+    <label>
+      Termo de busca
+      <input type="search" name="termo" data-search-input placeholder="Ex.: educação, proteção social, SEDEF">
+    </label>
+    <button class="button primary" type="submit">Buscar</button>
+  </form>
+</section>
 
-        <label for="indicador">Indicador</label>
-        <select id="indicador" name="indicador">
-          <option>Todos</option>
-          <option>Indicador de acompanhamento escolar</option>
-          <option>Indicador de atendimento social</option>
-        </select>
+<section class="panel fade-in">
+  <div class="section-title">
+    <p class="eyebrow">Filtros estruturados</p>
+    <h2>Compromisso, indicador, período e responsável</h2>
+  </div>
+  <p class="notice">Conforme validação com a professora/cliente, o filtro por status foi removido. O status aparece no detalhamento das tarefas, mas não é filtro nesta versão.</p>
+  <form class="filter-grid" data-filter-form>
+    <label>Compromisso
+      <select name="compromisso" data-filter="compromisso">
+        <option value="">Todos</option>
+        <option value="proteção social">Proteção social</option>
+        <option value="educação">Educação</option>
+        <option value="saúde">Saúde</option>
+      </select>
+    </label>
+    <label>Indicador
+      <select name="indicador" data-filter="indicador">
+        <option value="">Todos</option>
+        <option value="escolar">Acompanhamento escolar</option>
+        <option value="social">Atendimento social</option>
+        <option value="saúde">Atenção em saúde</option>
+      </select>
+    </label>
+    <label>Período
+      <select name="periodo" data-filter="periodo">
+        <option value="">Todo o plano carregado</option>
+        <option value="ciclo inicial">Ciclo inicial</option>
+        <option value="ciclo intermediário">Ciclo intermediário</option>
+        <option value="ciclo final">Ciclo final</option>
+      </select>
+    </label>
+    <label>Responsável
+      <select name="responsavel" data-filter="responsavel">
+        <option value="">Todos</option>
+        <option value="sedef">SEDEF</option>
+        <option value="conselho">Conselho Estadual</option>
+        <option value="secretaria">Secretaria Municipal</option>
+      </select>
+    </label>
+    <div class="button-row full-row">
+      <button class="button primary" type="submit">Aplicar filtros</button>
+      <button class="button secondary" type="button" data-clear-filters>Limpar filtros</button>
+    </div>
+  </form>
+</section>
 
-        <label for="periodo">Período</label>
-        <select id="periodo" name="periodo">
-          <option>Todo o período do plano carregado</option>
-          <option>Primeiro ciclo do plano</option>
-          <option>Segundo ciclo do plano</option>
-        </select>
+<section class="panel fade-in">
+  <div class="section-title row-title">
+    <div>
+      <p class="eyebrow">Resultado demonstrativo</p>
+      <h2>Itens encontrados</h2>
+    </div>
+    <span class="result-counter" data-result-counter>3 resultados</span>
+  </div>
+  <div class="table-wrap">
+    <table class="data-table" data-result-table>
+      <thead>
+        <tr><th>Item</th><th>Contexto</th><th>Responsável</th><th>Ação</th></tr>
+      </thead>
+      <tbody>
+        <tr data-search="proteção social atendimento social sedef ciclo inicial" data-compromisso="proteção social" data-indicador="social" data-periodo="ciclo inicial" data-responsavel="sedef">
+          <td>Fortalecer rede de proteção</td><td>Compromisso: Proteção social</td><td>SEDEF</td><td><a href="detalhamento.html">Detalhar</a></td>
+        </tr>
+        <tr data-search="educação acompanhamento escolar conselho ciclo intermediário" data-compromisso="educação" data-indicador="escolar" data-periodo="ciclo intermediário" data-responsavel="conselho">
+          <td>Acompanhar permanência escolar</td><td>Compromisso: Educação</td><td>Conselho Estadual</td><td><a href="detalhamento.html">Detalhar</a></td>
+        </tr>
+        <tr data-search="saúde atenção saúde secretaria ciclo final" data-compromisso="saúde" data-indicador="saúde" data-periodo="ciclo final" data-responsavel="secretaria">
+          <td>Ampliar acompanhamento em saúde</td><td>Compromisso: Saúde</td><td>Secretaria Municipal</td><td><a href="detalhamento.html">Detalhar</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="button-row">
+    <a class="button primary" href="dashboard.html">Ver dashboard com filtros</a>
+  </div>
+</section>
 
-        <label for="responsavel">Responsável</label>
-        <select id="responsavel" name="responsavel">
-          <option>Todos</option>
-          <option>SEDEF</option>
-          <option>Conselho Estadual</option>
-          <option>Secretaria Municipal</option>
-        </select>
-      </form>
-      <a class="botao" href="dashboard.html">Aplicar e ver dashboard</a>
-      <a class="botao secundario" href="index.html">Voltar</a>
-    </section>
-
-    <section>
-      <h2>Resultado demonstrativo</h2>
-      <table class="tabela">
-        <thead>
-          <tr>
-            <th>Item</th>
-            <th>Contexto</th>
-            <th>Ação</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Tarefa de acompanhamento escolar</td>
-            <td>Problema Público → Compromisso → Objetivo → Linha de Ação</td>
-            <td><a href="detalhamento.html">Ver detalhes</a></td>
-          </tr>
-          <tr>
-            <td>Indicador de atendimento social</td>
-            <td>Compromisso 01 → Objetivo 02</td>
-            <td><a href="dashboard.html">Ver dashboard</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
   </main>
 
-  <footer>Busca textual e filtros estruturados sem uso de JavaScript.</footer>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">PD</span>
+        <div>
+          <strong>Plano Decenal</strong>
+          <small>Sistema de Monitoramento</small>
+        </div>
+      </div>
+
+      <address class="footer-info">
+        <strong>Contato</strong><br>
+        contato@planodecenal.gov.br<br>
+        (41) 0000-0000
+      </address>
+
+      <div class="footer-info">
+        <strong>Endereço</strong><br>
+        R. Evaristo F. Ferreira da Costa, 383-391<br>
+        Curitiba, PR 82590-300
+      </div>
+
+      <div class="footer-info">
+        <strong>Suporte</strong><br>
+        <button class="support-link" type="button" data-support-button>Solicitar suporte</button>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+  <script src="js/script.js"></script>
 </body>
 </html>
