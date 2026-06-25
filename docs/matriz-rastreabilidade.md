@@ -1,14 +1,9 @@
----
-
-## title: matriz-rastreabilidade.md
-
-# Matriz de Rastreabilidade Parcial
+# Matriz de Rastreabilidade
 
 **Projeto:** Sistema de Monitoramento do Plano Decenal da Criança e do Adolescente
-**Versão:** 0.3
-**Entrega:** Semana 3 - Protótipo inicial e rastreabilidade parcial
-**Data:** 18/06/2025
-**Status:** Parcial / em evolução
+**Versão:** 1.3
+**Data:** 25/06/2025
+**Status:** Finalizado
 
 ---
 

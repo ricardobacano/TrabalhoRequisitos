@@ -1,13 +1,9 @@
----
-
-## title: regras-negocio.md
-
 # Regras de Negócio
 
 **Projeto:** Sistema de Monitoramento do Plano Decenal da Criança e do Adolescente
-**Versão:** 0.2
-**Data:** 19/06/2025
-**Status:** Em evolução
+**Versão:** 1.3
+**Data:** 25/06/2025
+**Status:** Finalizado
 
 ---
 
