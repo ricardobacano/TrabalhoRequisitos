@@ -1,14 +1,9 @@
----
-
-## title: backlog.md
-
-# Backlog Priorizado
+# Backlog
 
 **Projeto:** Sistema de Monitoramento do Plano Decenal da Criança e do Adolescente
 **Versão:** 1.3
-**Data:** 18/06/2025
-**Referência:** `docs/backlog.md`
-**Status:** Em evolução
+**Data:** 25/06/2025
+**Status:** Finalizado
 
 ---
 

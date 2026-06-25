@@ -1,12 +1,9 @@
-
-
 # Casos de uso
 
 **Projeto:** Sistema de monitoramento do plano decenal da criança e do adolescente
-**Versão:** 0.2
-**Data:** 18/06/2025
-**Referência:** `docs/casos-uso.md`
-**Status:** Em evolução
+**Versão:** 1.3
+**Data:** 25/06/2025
+**Status:** Finalizado
 
 ## 1. Objetivo
 
