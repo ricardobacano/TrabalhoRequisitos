@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Plano Decenal</title>
+  <meta name="description" content="Protótipo final do Sistema de Monitoramento do Plano Decenal da Criança e do Adolescente.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="topbar">
+      <a class="brand" href="index.html" aria-label="Voltar ao início">
+        <span class="brand-mark">PD</span>
+        <span>
+          <strong>Plano Decenal</strong>
+          <small>Monitoramento e transparência</small>
+        </span>
+      </a>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Alto contraste</button>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu-principal">Menu</button>
+      </div>
+    </div>
+
+    <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+          <a href="busca.html">Busca e filtros</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="detalhamento.html">Detalhamento</a>
+          <a href="historico.html">Histórico</a>
+          <a href="exportacao.html">Exportação</a>
+          <a href="login.html" class="active" aria-current="page">Login</a>
+          <a href="admin.html">Admin</a>
+          <a href="usuarios.html">Usuários</a>
+          <a href="acessibilidade.html">Acessibilidade</a>
+    </nav>
+  </header>
+
+  <main id="conteudo" class="page-shell">
+    <section class="hero fade-in">
+      <div>
+        <h1>Login</h1>
+        <p>Acesso demonstrativo às funcionalidades restritas conforme perfil.</p>
+      </div>
+    </section>
+
+    
+<section class="login-layout fade-in">
+  <article class="panel login-card">
+    <div class="section-title">
+      <p class="eyebrow">Área restrita</p>
+      <h2>Entrar no sistema</h2>
+    </div>
+    <p>A autenticação é demonstrativa. Requisitos técnicos como sessão e segurança permanecem classificados como requisitos não funcionais.</p>
+    <form data-login-form>
+      <label>E-mail
+        <input type="email" name="email" placeholder="usuario@exemplo.gov.br" required>
+      </label>
+      <label>Senha
+        <input type="password" name="senha" placeholder="Senha" required>
+      </label>
+      <button class="button primary full-width" type="submit">Entrar</button>
+    </form>
+    <p class="small-text">Demonstração: qualquer e-mail e senha preenchidos liberam o fluxo para o painel administrativo.</p>
+  </article>
+
+  <aside class="panel compact-panel">
+    <h2>Perfis com acesso</h2>
+    <ul class="check-list">
+      <li>Conselho / Secretaria</li>
+      <li>SEDEF</li>
+      <li>Administrador</li>
+    </ul>
+  </aside>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">PD</span>
+        <div>
+          <strong>Plano Decenal</strong>
+          <small>Sistema de Monitoramento</small>
+        </div>
+      </div>
+
+      <address class="footer-info">
+        <strong>Contato</strong><br>
+        contato@planodecenal.gov.br<br>
+        (41) 0000-0000
+      </address>
+
+      <div class="footer-info">
+        <strong>Endereço</strong><br>
+        R. Evaristo F. Ferreira da Costa, 383-391<br>
+        Curitiba, PR 82590-300
+      </div>
+
+      <div class="footer-info">
+        <strong>Suporte</strong><br>
+        <button class="support-link" type="button" data-support-button>Solicitar suporte</button>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhamento de Objetivos e Tarefas | Plano Decenal</title>
+  <meta name="description" content="Protótipo final do Sistema de Monitoramento do Plano Decenal da Criança e do Adolescente.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="topbar">
+      <a class="brand" href="index.html" aria-label="Voltar ao início">
+        <span class="brand-mark">PD</span>
+        <span>
+          <strong>Plano Decenal</strong>
+          <small>Monitoramento e transparência</small>
+        </span>
+      </a>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Alto contraste</button>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu-principal">Menu</button>
+      </div>
+    </div>
+
+    <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+          <a href="busca.html">Busca e filtros</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="detalhamento.html" class="active" aria-current="page">Detalhamento</a>
+          <a href="historico.html">Histórico</a>
+          <a href="exportacao.html">Exportação</a>
+          <a href="login.html">Login</a>
+          <a href="admin.html">Admin</a>
+          <a href="usuarios.html">Usuários</a>
+          <a href="acessibilidade.html">Acessibilidade</a>
+    </nav>
+  </header>
+
+  <main id="conteudo" class="page-shell">
+    <section class="hero fade-in">
+      <div>
+        <h1>Detalhamento de Objetivos e Tarefas</h1>
+        <p>Hierarquia completa, status, responsáveis, colaboradores e indicadores vinculados.</p>
+      </div>
+    </section>
+
+    
+<section class="panel fade-in">
+  <div class="breadcrumb" aria-label="Caminho da hierarquia">
+    Problema Público → Compromisso → Objetivo → Linha de Ação → Tarefa → Indicador
+  </div>
+  <div class="section-title">
+    <p class="eyebrow">Detalhamento</p>
+    <h2>Proteção social e fortalecimento da rede</h2>
+  </div>
+  <p>Esta tela demonstra a hierarquia completa do Plano Decenal e exibe status, percentual, responsáveis e colaboradores. O status é informação de acompanhamento, mas não é filtro estruturado.</p>
+</section>
+
+<section class="cards two-columns fade-in">
+  <article class="card task-card">
+    <div class="card-top"><h3>Tarefa 01 · Mapear rede de atendimento</h3><span class="status-pill warning">Em andamento</span></div>
+    <p><strong>Responsável:</strong> SEDEF</p>
+    <p><strong>Colaboradores:</strong> Conselho Estadual, Secretaria Municipal</p>
+    <p><strong>Papel:</strong> Execução e acompanhamento</p>
+    <div class="progress"><span data-progress="55"></span></div>
+    <p class="small-text">Indicador relacionado: cobertura de atendimento social.</p>
+    <div class="button-row"><a class="button secondary" href="historico.html">Ver histórico</a></div>
+  </article>
+  <article class="card task-card">
+    <div class="card-top"><h3>Tarefa 02 · Consolidar fluxo de acompanhamento</h3><span class="status-pill neutral">Não iniciada</span></div>
+    <p><strong>Responsável:</strong> Conselho Estadual</p>
+    <p><strong>Colaboradores:</strong> Não há colaboradores vinculados.</p>
+    <p><strong>Papel:</strong> Monitoramento e validação</p>
+    <div class="progress"><span data-progress="20"></span></div>
+    <p class="small-text">Indicador relacionado: processos acompanhados.</p>
+  </article>
+</section>
+
+<section class="panel fade-in">
+  <div class="section-title">
+    <p class="eyebrow">Edição simulada</p>
+    <h2>Atualizar status e percentual</h2>
+  </div>
+  <p>Em uma versão funcional, apenas Conselho/Secretaria e SEDEF teriam permissão para atualizar informações. A alteração geraria registro de alteração.</p>
+  <form class="form-grid" data-status-form>
+    <label>Status da tarefa
+      <select name="status">
+        <option>Não iniciada</option>
+        <option selected>Em andamento</option>
+        <option>Concluída</option>
+      </select>
+    </label>
+    <label>Percentual
+      <input type="range" min="0" max="100" value="55" data-range-output>
+      <span class="range-value">55%</span>
+    </label>
+    <label class="full-row">Justificativa da alteração
+      <textarea rows="3" placeholder="Ex.: atualização recebida pela secretaria responsável"></textarea>
+    </label>
+    <button class="button primary" type="submit">Salvar atualização simulada</button>
+  </form>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">PD</span>
+        <div>
+          <strong>Plano Decenal</strong>
+          <small>Sistema de Monitoramento</small>
+        </div>
+      </div>
+
+      <address class="footer-info">
+        <strong>Contato</strong><br>
+        contato@planodecenal.gov.br<br>
+        (41) 0000-0000
+      </address>
+
+      <div class="footer-info">
+        <strong>Endereço</strong><br>
+        R. Evaristo F. Ferreira da Costa, 383-391<br>
+        Curitiba, PR 82590-300
+      </div>
+
+      <div class="footer-info">
+        <strong>Suporte</strong><br>
+        <button class="support-link" type="button" data-support-button>Solicitar suporte</button>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+  <script src="js/script.js"></script>
+</body>
+</html>

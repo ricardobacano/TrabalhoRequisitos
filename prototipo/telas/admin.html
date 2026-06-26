@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Administrativo | Plano Decenal</title>
+  <meta name="description" content="Protótipo final do Sistema de Monitoramento do Plano Decenal da Criança e do Adolescente.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="topbar">
+      <a class="brand" href="index.html" aria-label="Voltar ao início">
+        <span class="brand-mark">PD</span>
+        <span>
+          <strong>Plano Decenal</strong>
+          <small>Monitoramento e transparência</small>
+        </span>
+      </a>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Alto contraste</button>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu-principal">Menu</button>
+      </div>
+    </div>
+
+    <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+          <a href="busca.html">Busca e filtros</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="detalhamento.html">Detalhamento</a>
+          <a href="historico.html">Histórico</a>
+          <a href="exportacao.html">Exportação</a>
+          <a href="login.html">Login</a>
+          <a href="admin.html" class="active" aria-current="page">Admin</a>
+          <a href="usuarios.html">Usuários</a>
+          <a href="acessibilidade.html">Acessibilidade</a>
+    </nav>
+  </header>
+
+  <main id="conteudo" class="page-shell">
+    <section class="hero fade-in">
+      <div>
+        <h1>Painel Administrativo</h1>
+        <p>Cadastro, edição, importação e auditoria para usuários autorizados.</p>
+      </div>
+    </section>
+
+    
+<section class="dashboard-summary fade-in">
+  <article class="metric-card"><span>Perfil</span><strong>SEDEF/Admin</strong><small>Acesso demonstrativo</small></article>
+  <article class="metric-card"><span>Cadastros</span><strong>6 entidades</strong><small>Hierarquia do plano</small></article>
+  <article class="metric-card"><span>Importação</span><strong>CSV/XLSX</strong><small>Validação prévia</small></article>
+  <article class="metric-card"><span>Auditoria</span><strong>Ativa</strong><small>Registro de alteração</small></article>
+</section>
+
+<section class="cards two-columns fade-in">
+  <article class="panel">
+    <div class="section-title"><p class="eyebrow">Cadastro</p><h2>Novo registro</h2></div>
+    <form class="form-grid" data-admin-form>
+      <label>Tipo de item
+        <select name="tipo">
+          <option>Problema público</option><option>Compromisso</option><option>Objetivo</option><option>Linha de ação</option><option>Tarefa</option><option>Indicador</option>
+        </select>
+      </label>
+      <label>Nome do item
+        <input type="text" name="nome" placeholder="Nome do item" required>
+      </label>
+      <label class="full-row">Justificativa
+        <textarea rows="3" placeholder="Justificativa para cadastro ou alteração"></textarea>
+      </label>
+      <button class="button primary" type="submit">Salvar registro simulado</button>
+    </form>
+  </article>
+
+  <article class="panel">
+    <div class="section-title"><p class="eyebrow">Importação</p><h2>Planilha com validação</h2></div>
+    <p>O sistema deve validar a estrutura da planilha e exibir prévia antes da confirmação.</p>
+    <form class="form-grid" data-upload-form>
+      <label>Arquivo
+        <input type="file" accept=".csv,.xlsx">
+      </label>
+      <button class="button secondary" type="submit">Validar planilha</button>
+    </form>
+    <div class="preview-box" data-upload-preview hidden>
+      <strong>Prévia simulada:</strong> 12 registros válidos, 0 erros estruturais. Confirmação pendente.
+    </div>
+  </article>
+</section>
+
+<section class="panel fade-in">
+  <div class="section-title row-title">
+    <div><p class="eyebrow">Auditoria</p><h2>Registro de alteração</h2></div>
+    <a class="button secondary" href="usuarios.html">Gerenciar usuários</a>
+  </div>
+  <p>Alterações administrativas devem gerar registro com ação, entidade, identificador, usuário, data/hora, campo modificado, valor anterior, valor novo e justificativa quando aplicável.</p>
+  <div class="table-wrap">
+    <table class="data-table" data-audit-table>
+      <thead><tr><th>Data/hora</th><th>Usuário</th><th>Ação</th><th>Entidade</th><th>Resumo</th></tr></thead>
+      <tbody>
+        <tr><td>Atual</td><td>sedef@exemplo.gov.br</td><td>Edição</td><td>Tarefa</td><td>Status alterado de não iniciada para em andamento.</td></tr>
+        <tr><td>Atual</td><td>admin@exemplo.gov.br</td><td>Permissão</td><td>Usuário</td><td>Perfil atualizado para Administrador.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="panel fade-in mobile-note">
+  <strong>Observação de responsividade:</strong> o painel administrativo é responsivo, porém tabelas extensas e rotinas de edição/importação são mais adequadas em telas médias ou grandes.
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">PD</span>
+        <div>
+          <strong>Plano Decenal</strong>
+          <small>Sistema de Monitoramento</small>
+        </div>
+      </div>
+
+      <address class="footer-info">
+        <strong>Contato</strong><br>
+        contato@planodecenal.gov.br<br>
+        (41) 0000-0000
+      </address>
+
+      <div class="footer-info">
+        <strong>Endereço</strong><br>
+        R. Evaristo F. Ferreira da Costa, 383-391<br>
+        Curitiba, PR 82590-300
+      </div>
+
+      <div class="footer-info">
+        <strong>Suporte</strong><br>
+        <button class="support-link" type="button" data-support-button>Solicitar suporte</button>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
