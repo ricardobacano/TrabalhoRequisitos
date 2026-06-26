@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento de Usuários | Plano Decenal</title>
+  <meta name="description" content="Protótipo final do Sistema de Monitoramento do Plano Decenal da Criança e do Adolescente.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="topbar">
+      <a class="brand" href="index.html" aria-label="Voltar ao início">
+        <span class="brand-mark">PD</span>
+        <span>
+          <strong>Plano Decenal</strong>
+          <small>Monitoramento e transparência</small>
+        </span>
+      </a>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Alto contraste</button>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu-principal">Menu</button>
+      </div>
+    </div>
+
+    <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+          <a href="busca.html">Busca e filtros</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="detalhamento.html">Detalhamento</a>
+          <a href="historico.html">Histórico</a>
+          <a href="exportacao.html">Exportação</a>
+          <a href="login.html">Login</a>
+          <a href="admin.html">Admin</a>
+          <a href="usuarios.html" class="active" aria-current="page">Usuários</a>
+          <a href="acessibilidade.html">Acessibilidade</a>
+    </nav>
+  </header>
+
+  <main id="conteudo" class="page-shell">
+    <section class="hero fade-in">
+      <div>
+        <h1>Gerenciamento de Usuários</h1>
+        <p>Quatro perfis oficiais e alteração de permissões pelo Administrador.</p>
+      </div>
+    </section>
+
+    
+<section class="panel fade-in">
+  <div class="section-title">
+    <p class="eyebrow">Perfis oficiais</p>
+    <h2>Controle de usuários e permissões</h2>
+  </div>
+  <div class="cards four-columns">
+    <article class="mini-card"><strong>Público Geral</strong><span>Consulta pública.</span></article>
+    <article class="mini-card"><strong>Conselho / Secretaria</strong><span>Acompanhamento e edição limitada.</span></article>
+    <article class="mini-card"><strong>SEDEF</strong><span>Cadastro, edição e importação.</span></article>
+    <article class="mini-card"><strong>Administrador</strong><span>Usuários, permissões e auditoria.</span></article>
+  </div>
+</section>
+
+<section class="panel fade-in">
+  <div class="section-title row-title">
+    <div><p class="eyebrow">Gerenciamento</p><h2>Usuários demonstrativos</h2></div>
+    <span class="status-pill neutral">RF15 duplicado de RF09</span>
+  </div>
+  <div class="table-wrap">
+    <table class="data-table" data-user-table>
+      <thead><tr><th>Nome</th><th>E-mail</th><th>Perfil atual</th><th>Alterar perfil</th></tr></thead>
+      <tbody>
+        <tr><td>Usuário SEDEF</td><td>sedef@exemplo.gov.br</td><td>SEDEF</td><td><select data-profile-select><option>SEDEF</option><option>Conselho / Secretaria</option><option>Administrador</option></select></td></tr>
+        <tr><td>Administrador</td><td>admin@exemplo.gov.br</td><td>Administrador</td><td><select data-profile-select><option>Administrador</option><option>SEDEF</option><option>Conselho / Secretaria</option></select></td></tr>
+        <tr><td>Consulta pública</td><td>publico@exemplo.gov.br</td><td>Público Geral</td><td><select data-profile-select><option>Público Geral</option><option>Conselho / Secretaria</option></select></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="notice">Qualquer alteração de perfil deve gerar registro no log administrativo de auditoria.</p>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">PD</span>
+        <div>
+          <strong>Plano Decenal</strong>
+          <small>Sistema de Monitoramento</small>
+        </div>
+      </div>
+
+      <address class="footer-info">
+        <strong>Contato</strong><br>
+        contato@planodecenal.gov.br<br>
+        (41) 0000-0000
+      </address>
+
+      <div class="footer-info">
+        <strong>Endereço</strong><br>
+        R. Evaristo F. Ferreira da Costa, 383-391<br>
+        Curitiba, PR 82590-300
+      </div>
+
+      <div class="footer-info">
+        <strong>Suporte</strong><br>
+        <button class="support-link" type="button" data-support-button>Solicitar suporte</button>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
